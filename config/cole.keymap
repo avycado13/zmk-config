@@ -1,0 +1,44 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "Base";
+            bindings = <
+                &kp C_PP
+                &kp C_PREV &kp C_NEXT
+                &kp C_MUTE
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        wasd_layer {
+            display-name = "WASD";
+            bindings = <
+                &kp S
+                &kp A &kp D
+                &kp W
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        toggle_wasd {
+            timeout-ms = <200>;
+            key-positions = <0 1 2 3>;
+            bindings = <&tog 1>;
+        };
+
+        unlock_studio {
+            timeout-ms = <200>;
+            key-positions = <0 3>;
+            bindings = <&studio_unlock>;
+        };
+    };
+};

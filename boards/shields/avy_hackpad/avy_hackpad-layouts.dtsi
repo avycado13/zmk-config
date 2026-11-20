@@ -1,0 +1,32 @@
+// See https://zmk.dev/docs/development/hardware-integration/physical-layouts
+// for how to configure this.
+
+#include <physical_layouts.dtsi>
+
+/ {
+    physical_layout_avy_hackpad: physical_layout_avy_hackpad {
+        compatible = "zmk,physical-layout";
+        display-name = "avy-hackpad";
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100   54  184       0    54   184>
+            , <&key_physical_attrs 100 100  263   79       0   263    79>
+            , <&key_physical_attrs 100 100   54   79       0    54    79>
+            , <&key_physical_attrs 100 100  368  184       0   368   184>
+            , <&key_physical_attrs 100 100  368   79       0   368    79>
+            , <&key_physical_attrs 100 100  368(-25)       0   368 (-25)>
+            , <&key_physical_attrs 100 100(-50)(-25)       0 (-50) (-25)>
+            , <&key_physical_attrs 100 100  159(-25)       0   159 (-25)>
+            , <&key_physical_attrs 100 100  263  184       0   263   184>
+            , <&key_physical_attrs 100 100  263(-25)       0   263 (-25)>
+            , <&key_physical_attrs 100 100   54(-25)       0    54 (-25)>
+            , <&key_physical_attrs 100 100(-50)  184       0 (-50)   184>
+            , <&key_physical_attrs 100 100  159  184       0   159   184>
+            , <&key_physical_attrs 100 100(-50)   79       0 (-50)    79>
+            , <&key_physical_attrs 100 100  159   79       0   159    79>
+            // Encoder push-buttons (indices 15, 16, 17)
+            , <&key_physical_attrs 100 100  500  200       0   500   200>
+            , <&key_physical_attrs 100 100  500   75       0   500    75>
+            , <&key_physical_attrs 100 100  500(-50)       0   500 (-50)>
+            ;
+    };
+};

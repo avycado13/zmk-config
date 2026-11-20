@@ -1,0 +1,14 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    physical_layout_cole: physical_layout_cole {
+        compatible = "zmk,physical-layout";
+        display-name = "cole";
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100  365  121       0   365   121>
+            , <&key_physical_attrs 100 100  247  121       0   247   121>
+            , <&key_physical_attrs 100 100  247    0       0   247     0>
+            , <&key_physical_attrs 100 100  132  121       0   132   121>
+            ;
+    };
+};

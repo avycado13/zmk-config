@@ -1,0 +1,6 @@
+if SHIELD_AVY_HACKPAD
+
+config ZMK_KEYBOARD_NAME
+    default "Avy's Hackpad"
+
+endif # SHIELD_AVY_HACKPAD
